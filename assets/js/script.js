@@ -14,6 +14,10 @@ $('input[type="text"]').keypress(function(e){
     var todoText = $(this).val();
     console.log(todoText);
     $(this).val('');
-    $('ul').append('<li><span>X </span>' + todoText + '</li>');
+    $('ul').append('<li><span><i class="fa fa-trash"></i></span> ' + todoText + '</li>');
   }
+})
+
+$('.fa-pencil').on('click', function(){
+  $('input[type="text"]').fadeToggle();
 })
